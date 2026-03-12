@@ -1,8 +1,10 @@
 import { useParams } from 'react-router';
 import products from '../data/products';
+import { useCartActions } from '../context/CartContext';
 
 function Product() {
   const { id } = useParams();
+  const { addToCart } = useCartActions();
   const product = products[id];
 
   if (!product) return <p>Product not found.</p>;
@@ -17,7 +19,7 @@ function Product() {
         <img src={product.image} className="w-full rounded-lg" alt={product.name} />
       </div>
       <button
-        onClick={() => console.warn('Not implemented!')}
+        onClick={() => addToCart(id)}
         className="w-full py-md px-lg bg-primary text-white text-lg font-semibold rounded-lg hover:opacity-90 transition-opacity"
       >
         Add to cart

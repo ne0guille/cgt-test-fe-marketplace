@@ -1,6 +1,8 @@
 import { Link } from 'react-router';
+import { useCartData } from '../context/CartContext';
 
 function Header() {
+  const { cartCount } = useCartData();
   return (
     <header>
       90s shop
@@ -8,7 +10,7 @@ function Header() {
         <ul style={{listStyleType: 'none', display: 'flex'}}>
           <li><Link to="/">Home</Link></li>
           |
-          <li><Link to="/cart">Cart (0)</Link></li>
+          <li><Link to="/cart">Cart ({cartCount})</Link></li>
         </ul>
       </nav>
       <hr/>

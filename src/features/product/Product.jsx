@@ -1,8 +1,8 @@
 import { useParams } from 'react-router';
-import products from '../data/products';
-import { useCartActions, useCartData } from '../context/CartContext';
-import {CartCountBadge} from './CartCountBadge';
-import {Price} from './Price';
+import products from '../../data/products';
+import { useCartActions, useCartData } from '../../context/CartContext';
+import {CartCountBadge} from '../../components/CartCountBadge/CartCountBadge';
+import {Price} from '../../components/Price/Price';
 
 function Product() {
   const { id } = useParams();

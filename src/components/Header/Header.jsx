@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router';
-import { useCartData } from '../context/CartContext';
+import { useCartData } from '../../context/CartContext';
 
 function Header() {
   const { cartCount } = useCartData();

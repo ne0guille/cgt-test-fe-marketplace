@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
-import { useCartActions, useCartData } from '../context/CartContext';
-import { CartCountBadge } from './CartCountBadge';
-import { Price } from './Price';
+import { useCartActions, useCartData } from '../../../context/CartContext';
+import { CartCountBadge } from '../../../components/CartCountBadge/CartCountBadge';
+import { Price } from '../../../components/Price/Price';
 
 function ProductCard({ id, product }) {
   const { addToCart } = useCartActions();

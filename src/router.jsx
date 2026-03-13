@@ -1,10 +1,10 @@
 import { lazy } from 'react';
 import { Routes, Route } from 'react-router';
-import Layout from './components/Layout';
-import Home from './components/Home';
+import Layout from './components/Layout/Layout';
+import Home from './features/home/Home';
 
-const Product = lazy(() => import('./components/Product'));
-const Cart = lazy(() => import('./components/Cart'));
+const Product = lazy(() => import('./features/product/Product'));
+const Cart = lazy(() => import('./features/cart/Cart'));
 
 function AppRoutes() {
   return (

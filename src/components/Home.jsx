@@ -1,17 +1,15 @@
-import { Link } from 'react-router';
+import products from '../data/products';
+import ProductCard from './ProductCard';
 
 function Home() {
   return (
     <div>
-      Welcome to our shop!
-
-      <p>
-        You are probably interested in <Link to="/products/a">A</Link>.
-      </p>
-
-      <p>
-        Check out the newest product <Link to="/products/b">B</Link>!
-      </p>
+      <h1 className="text-2xl font-bold mb-6 text-center pt-lg">Welcome to our shop!</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {Object.entries(products).map(([id, product]) => (
+          <ProductCard key={id} id={id} product={product} />
+        ))}
+      </div>
     </div>
   );
 }

@@ -5,9 +5,11 @@ button {
 }
 
 @theme {
-  --color-primary: #6d28d9;
-  --color-secondary: #1e293b;
-  --color-accent: #f59e0b;
+  --color-primary: #18181b;
+  --color-secondary: #71717a;
+  --color-accent: #fafafa;
+
+  --container-content: 64rem;
 
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;

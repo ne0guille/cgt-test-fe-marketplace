@@ -10,7 +10,7 @@ function Product() {
   if (!product) return <p>Product not found.</p>;
 
   return (
-    <div className="max-w-2xl mx-auto p-md">
+    <div className="max-w-2xl mx-auto">
       <div className="flex justify-between items-center mb-md">
         <h1 className="text-2xl font-bold">{product.name}</h1>
         <span className="text-xl font-semibold text-secondary">${product.price} USD</span>
@@ -20,7 +20,7 @@ function Product() {
       </div>
       <button
         onClick={() => addToCart(id)}
-        className="w-full py-md px-lg bg-primary text-white text-lg font-semibold rounded-lg hover:opacity-90 transition-opacity"
+        className="w-full py-md px-lg bg-primary text-white text-lg font-semibold rounded-full shadow-sm hover:opacity-90 transition-opacity"
       >
         Add to cart
       </button>

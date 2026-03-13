@@ -5,7 +5,9 @@ function Layout() {
   return (
     <main>
       <Header />
-      <Outlet />
+      <div className="max-w-content mx-auto px-md">
+        <Outlet />
+      </div>
     </main>
   );
 }

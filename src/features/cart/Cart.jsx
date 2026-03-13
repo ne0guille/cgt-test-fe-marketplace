@@ -20,7 +20,7 @@ function Cart() {
   const total = calculateCartTotal(cart, products);
 
   if (cartItems.length === 0) {
-    return <div className="p-4">Your cart is empty.</div>;
+    return <div className="text-center p-4">Your cart is empty.</div>;
   }
 
   return (

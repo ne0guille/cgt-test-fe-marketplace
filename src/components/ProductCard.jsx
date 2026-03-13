@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
 import { useCartActions, useCartData } from '../context/CartContext';
+import CartCountBadge from './CartCountBadge';
 
 function ProductCard({ id, product }) {
   const { addToCart } = useCartActions();
@@ -25,11 +26,7 @@ function ProductCard({ id, product }) {
         <span className="absolute top-2 right-2 bg-accent text-primary text-sm font-medium px-2 py-0.5 rounded-full shadow-sm">
           ${product.price}
         </span>
-        {quantity > 0 ? (
-          <span className="absolute top-2 left-2 bg-green-500 text-white text-sm font-medium px-2 py-0.5 rounded-full shadow-sm">
-            ✓ {quantity}
-          </span>
-        ) : null}
+        <CartCountBadge quantity={quantity} />
       </div>
       <div className="p-4 flex justify-between items-center">
         <h2 className="text-lg font-semibold">{product.name}</h2>

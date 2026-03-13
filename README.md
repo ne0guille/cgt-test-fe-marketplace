@@ -28,33 +28,46 @@ Good luck!
 
 ---
 
-## Getting Started with Create React App
+## Getting Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project uses [Vite](https://vite.dev/) as the build tool and [pnpm](https://pnpm.io/) as the package manager.
 
-## Available Scripts
+### Install dependencies
 
-In the project directory, you can run:
+```bash
+pnpm install
+```
 
-### `npm start`
+### Available Scripts
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### `pnpm start`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Runs the app in development mode.\
+Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
 
-### `npm test`
+#### `pnpm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches [Vitest](https://vitest.dev/) in watch mode.\
+Tests re-run automatically when files change.
 
-### `npm run build`
+```bash
+# Run all tests once
+pnpm test -- --run
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Run a specific test file
+pnpm test -- --run src/features/cart/Cart.test.jsx
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Run tests matching a pattern
+pnpm test -- --run -t "Cart"
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Run with coverage report
+pnpm test -- --run --coverage
+```
+
+#### `pnpm build`
+
+Builds the app for production to the `dist` folder.
+
+#### `pnpm preview`
+
+Serves the production build locally for preview.

@@ -22,21 +22,21 @@ function ProductCard({ id, product }) {
           alt={product.name}
           className="w-full aspect-video object-cover"
         />
-        <span className="absolute top-sm right-sm bg-accent text-primary text-sm font-medium px-sm py-0.5 rounded-full shadow-sm">
+        <span className="absolute top-2 right-2 bg-accent text-primary text-sm font-medium px-2 py-0.5 rounded-full shadow-sm">
           ${product.price}
         </span>
         {quantity > 0 ? (
-          <span className="absolute top-sm left-sm bg-green-500 text-white text-sm font-medium px-sm py-0.5 rounded-full shadow-sm">
+          <span className="absolute top-2 left-2 bg-green-500 text-white text-sm font-medium px-2 py-0.5 rounded-full shadow-sm">
             ✓ {quantity}
           </span>
         ) : null}
       </div>
-      <div className="p-md flex justify-between items-center">
+      <div className="p-4 flex justify-between items-center">
         <h2 className="text-lg font-semibold">{product.name}</h2>
         <button
           type='button'
           onClick={handleAddToCart}
-          className="px-md py-sm text-sm bg-primary text-white rounded-full shadow-sm hover:opacity-90 transition-opacity"
+          className="px-4 py-2 text-sm bg-primary text-white rounded-full shadow-sm hover:opacity-90 transition-opacity"
         >
           Add to cart
         </button>

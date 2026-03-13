@@ -19,17 +19,17 @@ function Cart() {
   const total = calculateCartTotal(cart, products).toFixed(2);
 
   if (cartItems.length === 0) {
-    return <div className="p-md">Your cart is empty.</div>;
+    return <div className="p-4">Your cart is empty.</div>;
   }
 
   return (
-    <div className="p-md">
-      <h2 className="text-xl font-bold mb-md">Are you ready to purchase these?</h2>
+    <div className="p-4">
+      <h2 className="text-xl font-bold mb-4">Are you ready to purchase these?</h2>
       <ul>
         {cartItems.map(([id, qty]) => {
           const product = products[id];
           return (
-            <li key={id} className="flex justify-between items-center mb-sm">
+            <li key={id} className="flex justify-between items-center mb-2">
               <div className="flex gap-3 items-center">
                 <img src={product.image} alt={product.name} className="w-12 h-12 object-cover rounded" />
                 <span>
@@ -48,7 +48,7 @@ function Cart() {
           );
         })}
       </ul>
-      <div className="border-t pt-md mt-md text-right font-bold text-lg">
+      <div className="border-t pt-4 mt-4 text-right font-bold text-lg">
         Total: ${total} USD
       </div>
     </div>

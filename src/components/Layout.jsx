@@ -6,7 +6,7 @@ function Layout() {
   return (
     <main>
       <Header />
-      <div className="max-w-content mx-auto px-md">
+      <div className="max-w-content mx-auto px-4">
         <Suspense fallback={null}>
           <Outlet />
         </Suspense>

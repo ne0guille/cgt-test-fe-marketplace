@@ -4,3 +4,12 @@ export function calculateCartTotal(cart, products) {
     0
   );
 }
+
+const currencyFormatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+});
+
+export function formatPrice(amount) {
+  return currencyFormatter.format(amount);
+}

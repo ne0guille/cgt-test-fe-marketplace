@@ -7,7 +7,7 @@ function Layout() {
     <main>
       <Header />
       <div className="max-w-content mx-auto px-4">
-        <Suspense fallback={null}>
+        <Suspense fallback={<p className="p-8 text-center text-secondary">Loading…</p>}>
           <Outlet />
         </Suspense>
       </div>

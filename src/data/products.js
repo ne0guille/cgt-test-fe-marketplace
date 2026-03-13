@@ -1,5 +1,5 @@
-import pictureA from '../a.jpg';
-import pictureB from '../b.jpg';
+import pictureA from '../assets/product-a.jpg';
+import pictureB from '../assets/product-b.jpg';
 
 const products = {
   a: { name: 'Product A', price: 10, image: pictureA },

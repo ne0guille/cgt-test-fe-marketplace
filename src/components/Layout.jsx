@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { Outlet } from 'react-router';
 import Header from './Header';
 
@@ -6,7 +7,9 @@ function Layout() {
     <main>
       <Header />
       <div className="max-w-content mx-auto px-md">
-        <Outlet />
+        <Suspense fallback={null}>
+          <Outlet />
+        </Suspense>
       </div>
     </main>
   );

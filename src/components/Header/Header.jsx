@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router';
 import { useCartData } from '../../context/CartContext';
 
-function Header() {
+export function Header() {
   const { cartCount } = useCartData();
   const linkClass = ({ isActive }) =>
     `transition-colors ${isActive ? 'text-primary font-semibold' : 'text-secondary hover:text-primary'}`;
@@ -20,5 +20,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;

@@ -3,7 +3,7 @@ import { createContext, useContext, useReducer, useMemo } from 'react';
 const CartDataContext = createContext();
 const CartActionsContext = createContext();
 
-function cartReducer(state, action) {
+export function cartReducer(state, action) {
   switch (action.type) {
     case 'ADD_TO_CART': {
       const id = action.payload;
@@ -18,8 +18,8 @@ function cartReducer(state, action) {
   }
 }
 
-export function CartProvider({ children }) {
-  const [cart, dispatch] = useReducer(cartReducer, {});
+export function CartProvider({ children, initialCart = {} }) {
+  const [cart, dispatch] = useReducer(cartReducer, initialCart);
 
   const actions = useMemo(() => ({
     addToCart: (id) => dispatch({ type: 'ADD_TO_CART', payload: id }),

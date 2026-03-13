@@ -3,7 +3,7 @@ import { useCartActions, useCartData } from '../../../context/CartContext';
 import { CartCountBadge } from '../../../components/CartCountBadge/CartCountBadge';
 import { Price } from '../../../components/Price/Price';
 
-function ProductCard({ id, product }) {
+export function ProductCard({ id, product }) {
   const { addToCart } = useCartActions();
   const { cart } = useCartData();
   const quantity = cart[id] || 0;
@@ -44,5 +44,3 @@ function ProductCard({ id, product }) {
     </Link>
   );
 }
-
-export default ProductCard;

@@ -1,12 +1,12 @@
 import { lazy } from 'react';
 import { Routes, Route } from 'react-router';
-import Layout from './components/Layout/Layout';
-import Home from './features/home/Home';
+import { Layout } from './components/Layout/Layout';
+import { Home } from './features/home/Home';
 
-const Product = lazy(() => import('./features/product/Product'));
-const Cart = lazy(() => import('./features/cart/Cart'));
+const Product = lazy(() => import('./features/product/Product').then(m => ({ default: m.Product })));
+const Cart = lazy(() => import('./features/cart/Cart').then(m => ({ default: m.Cart })));
 
-function AppRoutes() {
+export function AppRoutes() {
   return (
     <Routes>
       <Route element={<Layout />}>
@@ -17,5 +17,3 @@ function AppRoutes() {
     </Routes>
   );
 }
-
-export default AppRoutes;

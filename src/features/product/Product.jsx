@@ -4,7 +4,7 @@ import { useCartActions, useCartData } from '../../context/CartContext';
 import {CartCountBadge} from '../../components/CartCountBadge/CartCountBadge';
 import {Price} from '../../components/Price/Price';
 
-function Product() {
+export function Product() {
   const { id } = useParams();
   const { addToCart } = useCartActions();
   const { cart } = useCartData();
@@ -31,5 +31,3 @@ function Product() {
     </div>
   );
 }
-
-export default Product;

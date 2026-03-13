@@ -1,7 +1,7 @@
 import products from '../../data/products';
-import ProductCard from './ProductCard/ProductCard';
+import { ProductCard } from './ProductCard/ProductCard';
 
-function Home() {
+export function Home() {
   return (
     <div>
       <h1 className="text-2xl font-bold mb-6 text-center pt-8">Welcome to our shop!</h1>
@@ -13,5 +13,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;

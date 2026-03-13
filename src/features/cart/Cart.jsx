@@ -13,7 +13,7 @@ const trashIcon = (
   </svg>
 );
 
-function Cart() {
+export function Cart() {
   const { cart } = useCartData();
   const { removeFromCart } = useCartActions();
   const cartItems = Object.entries(cart);
@@ -55,5 +55,3 @@ function Cart() {
     </div>
   );
 }
-
-export default Cart;
